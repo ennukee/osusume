@@ -3,9 +3,35 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0"
+    "@testing-library/jest-dom": "^4.2.3",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/react-hooks": "^3.1.1",
+    "@types/jest": "^24.0.22",
+    "@types/node": "^12.12.5",
+    "@types/react-tooltip": "^3.9.3",
+    "d3-ease": "^1.0.5",
+    "node-sass": "^4.13.0",
+    "react": "^0.0.0-experimental-38dd17ab9",
+    "react-dom": "^0.0.0-experimental-38dd17ab9",
+    "react-icons": "^3.8.0",
+    "react-scripts": "3.2.0",
+    "react-spring": "^8.0.27",
+    "react-tooltip": "^3.10.0",
+    "typescript": "^3.7.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.6.1",
+    "@typescript-eslint/parser": "^2.6.1",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-typescript": "^6.0.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.0.1",
+    "jest-canvas-mock": "^2.1.2",
+    "jest-fetch-mock": "^2.1.2",
+    "prettier": "^1.18.2"
   },
   "scripts": {
     "start": "react-scripts start",
