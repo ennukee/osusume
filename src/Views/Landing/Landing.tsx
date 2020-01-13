@@ -27,7 +27,7 @@ export const Landing: React.FC = () => {
         <div id="intro-container">
           <header id="title">osusume</header>
           <div id="subtitle">recommendations by a robot</div>
-          <Link to="/">
+          <Link to="/login">
             <animated.div style={buttonProps} role="button" id="join-button">
               Find your new binge
             </animated.div>
@@ -39,12 +39,6 @@ export const Landing: React.FC = () => {
         <Step number={1} title="Sync">
           Log in with your AniList account to sync your watching history
         </Step>
-        {/* <Step number={2} title="Analyze">
-          osusume analyzes your watching history to provide metrics to score recommendations on
-        </Step>
-        <Step number={3} title="Calculate">
-          We then take these metrics and compare them against a weighted set of animes pulled from AniList
-        </Step> */}
         <Step number={2} title="Analyze">
           osusume analyzes your history and applies weighted metrics to a set of animes pulled from AniList
         </Step>

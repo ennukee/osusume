@@ -1,0 +1,24 @@
+#loading-panel {
+  position: relative;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px;
+  .label {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    text-align: center;
+  }
+  .loading-gif {
+    width: 150px;
+  }
+  // .slow-label {
+  //   position: absolute;
+  //   bottom: 10px;
+  //   text-align: center;
+  // }
+}
