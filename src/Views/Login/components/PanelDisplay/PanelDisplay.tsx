@@ -4,9 +4,8 @@ import './PanelDisplay.scss';
 
 interface PanelProps {
   phase: string;
-  setPhase: Function;
 }
-const PanelDisplay: React.FC<PanelProps> = ({ phase, setPhase }) => {
+export const PanelDisplay: React.FC<PanelProps> = ({ phase }) => {
   switch (phase) {
     case 'initialLoad':
       return <Loading>Checking for existing login...</Loading>;
@@ -35,5 +34,3 @@ const PanelDisplay: React.FC<PanelProps> = ({ phase, setPhase }) => {
       return <div>unknown</div>;
   }
 };
-
-export default PanelDisplay;

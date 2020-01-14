@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { PanelDimContainer } from 'Interfaces/main';
-import PanelDisplay from 'Views/Login/components/PanelDisplay/PanelDisplay';
+import { PanelDisplay } from 'Views/Login/components/PanelDisplay/PanelDisplay';
 
 // To be removed when API is up and running
 import { testTokenQuery, testOsusumeCheck, testProfileGen, testGenerateRecs } from 'Utils/mockAPI';
@@ -23,6 +23,16 @@ export const Login: React.FC<LoginProps> = ({ location, history }) => {
   const panelProps = useSpring({
     width: panelDimByPhase[phase]?.width || 300,
     minHeight: panelDimByPhase[phase]?.height || 140,
+  });
+  const panelEntryProps = useSpring({
+    to: {
+      transform: 'translateY(0px)',
+      opacity: 1,
+    },
+    from: {
+      transform: 'translateY(-75px)',
+      opacity: 0,
+    },
   });
 
   // ! ----------------- ! //
@@ -61,8 +71,9 @@ export const Login: React.FC<LoginProps> = ({ location, history }) => {
         // If we have a pre-saved token, try to validate it
         const checkToken = async () => {
           const result = await testTokenQuery();
-          if (result) {
+          if (result.ok) {
             // If we have a usable token pre-cached, move on to the post-login logic
+            console.log('boop');
             setPhase('postLogin');
           } else {
             localStorage.removeItem('token'); // remove outdated token
@@ -128,8 +139,8 @@ export const Login: React.FC<LoginProps> = ({ location, history }) => {
         backgroundImage: `url(${process.env.PUBLIC_URL + '/landing-bg.jpg'})`,
       }}
     >
-      <animated.div id="main-panel" style={panelProps}>
-        <PanelDisplay phase={phase} setPhase={setPhase} />
+      <animated.div id="main-panel" style={{ ...panelProps, ...panelEntryProps }}>
+        <PanelDisplay phase={phase} />
       </animated.div>
     </div>
   );
