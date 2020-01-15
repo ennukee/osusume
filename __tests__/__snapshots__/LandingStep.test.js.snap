@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/LandingStep props matches snapshot 1`] = `
+<div>
+  <div
+    class="LandingStep__Container-vcdptp-0 gqyyxB"
+  >
+    <div
+      class="LandingStep__StepBackLine-vcdptp-1 hHJrnk"
+    />
+    <div
+      class="LandingStep__StepNumber-vcdptp-2 dnhYiE"
+    >
+      1
+    </div>
+    <div
+      class="LandingStep__StepTitle-vcdptp-3 hYYVCh"
+    >
+      Title
+    </div>
+    <div
+      class="LandingStep__StepDescription-vcdptp-4 hwWZsk"
+    >
+      Children
+    </div>
+  </div>
+</div>
+`;
