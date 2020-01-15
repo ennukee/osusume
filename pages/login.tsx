@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { PanelDimContainer } from '../utils/interfaces';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { PanelDisplay } from '../components/PanelDisplay/PanelDisplay';
 
 // To be removed when API is up and running
@@ -135,8 +135,36 @@ const Login: React.FC = () => {
   );
 };
 
+const bgColoring = keyframes`
+  0% {
+    filter: contrast(1) hue-rotate(0deg);
+    -webkit-filter: contrast(1) hue-rotate(0deg);
+  }
+  50% {
+    filter: contrast(1.2) hue-rotate(15deg);
+    -webkit-filter: contrast(1.2) hue-rotate(15deg);
+  }
+  100% {
+    filter: contrast(1) hue-rotate(0deg);
+    -webkit-filter: contrast(1) hue-rotate(0deg);
+  }
+`;
+
+const bgMovement = keyframes`
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 70%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+`;
+
 const LoginContainer = styled.div`
   background-image: url('/static/landing-bg.jpg');
+  animation: ${bgMovement} 60s ease-in-out infinite, ${bgColoring} 20s infinite;
   display: flex;
   align-items: center;
   justify-content: center;
