@@ -1,66 +1,11 @@
-# TypeScript Next.js example
+# osusume
 
-This is a really simple project that show the usage of Next.js with TypeScript.
+a machine-learning based anime and manga recommendation platform. this repository currently only contains the front-end, but I may convince my colleague to put his backend code here as well.
 
-## Deploy your own
+coming soon to a website near you
 
-Deploy the example using [ZEIT Now](https://zeit.co/now):
+and by soon, that probably means sometime mid-2020 given mine and [my colleague](https://github.com/NNarma)'s schedules.
 
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/zeit/next.js/tree/canary/examples/with-typescript)
+---
 
-## How to use it?
-
-### Using `create-next-app`
-
-Execute [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app) with [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) or [npx](https://github.com/zkat/npx#readme) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-typescript with-typescript-app
-# or
-yarn create next-app --example with-typescript with-typescript-app
-```
-
-### Download manually
-
-Download the example:
-
-```bash
-curl https://codeload.github.com/zeit/next.js/tar.gz/canary | tar -xz --strip=2 next.js-canary/examples/with-typescript
-cd with-typescript
-```
-
-Install it and run:
-
-```bash
-npm install
-npm run dev
-# or
-yarn
-yarn dev
-```
-
-Deploy it to the cloud with [now](https://zeit.co/now) ([download](https://zeit.co/download)):
-
-```bash
-now
-```
-
-## The idea behind the example
-
-This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
-
-```
-npm install --save-dev typescript
-```
-
-To enable TypeScript's features, we install the type declaratons for React and Node.
-
-```
-npm install --save-dev @types/react @types/react-dom @types/node
-```
-
-When we run `next dev` the next time, Next.js will start looking for any `.ts` or `.tsx` files in our project and builds it. It even automatically creates a `tsconfig.json` file for our project with the recommended settings.
-
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
-
-A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
+Formerly located at [osusume-frontend](https://github.com/ennukee/osusume-frontend) but was moved here due to me deciding to redo the entire site with the knowledge I gained from developing AniUpdater
