@@ -13,11 +13,8 @@ const panelDimByPhase: PanelDimContainer = {
     height: 140,
   },
 };
-interface LoginProps {
-  location: any; // react-router interface
-  history: any; // react-router interface
-}
-const Login: React.FC<LoginProps> = ({ location, history }) => {
+
+const Login: React.FC = () => {
   const [phase, setPhase] = useState('initialLoad');
   const panelProps = useSpring({
     width: panelDimByPhase[phase]?.width || 300,
@@ -82,7 +79,7 @@ const Login: React.FC<LoginProps> = ({ location, history }) => {
     } else {
       setPhase('login');
     }
-  }, [location, history]);
+  }, []);
 
   // ? ------------------------- ? //
   // ? Per-phase data processing ? //

@@ -1,20 +1,20 @@
-import React from "react";
+import React from 'react';
 // import Step from 'Views/Landing/components/Step/Step';
-import Link from "next/link";
-import { useSpring, animated } from "react-spring";
-import styled, { keyframes } from "styled-components";
-import { LandingStep } from "../components/LandingStep";
+import Link from 'next/link';
+import { useSpring, animated } from 'react-spring';
+import styled, { keyframes } from 'styled-components';
+import { LandingStep } from '../components/LandingStep';
 
 const Landing: React.FC = () => {
   const buttonProps = useSpring({
-    transform: "scale(1)",
+    transform: 'scale(1)',
     from: {
-      transform: "scale(0)"
+      transform: 'scale(0)',
     },
     config: {
       friction: 25,
-      tension: 500
-    }
+      tension: 500,
+    },
   });
   return (
     <>
@@ -34,8 +34,7 @@ const Landing: React.FC = () => {
             Log in with your AniList account to sync your watching history
           </LandingStep>
           <LandingStep number={2} title="Analyze">
-            osusume analyzes your history and applies weighted metrics to a set
-            of animes pulled from AniList
+            osusume analyzes your history and applies weighted metrics to a set of animes pulled from AniList
           </LandingStep>
           <LandingStep number={3} title="Present">
             Once we finish processing, we take the best and show them to you
@@ -144,7 +143,7 @@ const Container = styled.div`
   width: 100%;
   height: 400px;
   border-bottom: 1px solid var(--font-color-tint);
-  background-image: url("/static/landing-bg.jpg");
+  background-image: url('/static/landing-bg.jpg');
   background-size: cover;
   background-size: 150%;
   background-position: 0% 50%;

@@ -16,7 +16,7 @@ export const Loading: React.FC<LoadingProps> = ({ children, slow }) => {
 };
 
 const LoadingPanel = styled.div`
-    position: relative;
+  position: relative;
   min-height: inherit;
   display: flex;
   flex-direction: column;
@@ -26,14 +26,14 @@ const LoadingPanel = styled.div`
 `;
 
 const LoadingLabel = styled.div`
-    font-size: 16px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 600;
-    text-align: center;
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  text-align: center;
 `;
 
 const LoadingGif = styled.img`
-    width: 150px;
+  width: 150px;
 `;
 
 const SlowLabel = styled.div``;
