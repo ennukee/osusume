@@ -12,7 +12,7 @@ const Landing: React.FC = () => {
       transform: 'scale(0)',
     },
     config: {
-      friction: 25,
+      friction: 24,
       tension: 500,
     },
   });
