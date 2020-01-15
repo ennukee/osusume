@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Views/Login/components/PanelDisplay/components/Loading puts children as the body of the label div 1`] = `
+<div>
+  <div
+    class="Loading__LoadingPanel-sc-1g2rmbs-0 bikQKX"
+  >
+    <div
+      class="Loading__LoadingLabel-sc-1g2rmbs-1 gRBana"
+    >
+      Children
+    </div>
+    <img
+      class="Loading__LoadingGif-sc-1g2rmbs-2 gbhczI"
+      src="/static/loading.gif"
+    />
+    <div
+      class="Loading__SlowLabel-sc-1g2rmbs-3 iAfWcn"
+    />
+  </div>
+</div>
+`;
+
+exports[`Views/Login/components/PanelDisplay/components/Loading renders slow-label message if param is passed 1`] = `
+<div>
+  <div
+    class="Loading__LoadingPanel-sc-1g2rmbs-0 bikQKX"
+  >
+    <div
+      class="Loading__LoadingLabel-sc-1g2rmbs-1 gRBana"
+    >
+      Children
+    </div>
+    <img
+      class="Loading__LoadingGif-sc-1g2rmbs-2 gbhczI"
+      src="/static/loading.gif"
+    />
+    <div
+      class="Loading__SlowLabel-sc-1g2rmbs-3 iAfWcn"
+    >
+      Stay tight, this part may take a few minutes to complete.
+    </div>
+  </div>
+</div>
+`;

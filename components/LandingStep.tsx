@@ -1,16 +1,12 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 interface StepProps {
   number: number;
   title: string;
   children: string;
 }
-export const LandingStep: React.FC<StepProps> = ({
-  number,
-  title,
-  children
-}) => {
+export const LandingStep: React.FC<StepProps> = ({ number, title, children }) => {
   return (
     <Container>
       <StepBackLine />
@@ -44,18 +40,17 @@ const StepNumber = styled.div`
   font-weight: 900;
   font-size: 40px;
   z-index: 2;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 `;
 
 const StepTitle = styled.div`
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 24px;
   margin-top: -5px;
 `;
 
 const StepDescription = styled.div`
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 14px;
   text-align: center;
   margin-top: 15px;

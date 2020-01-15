@@ -36,33 +36,33 @@ export const PanelDisplay: React.FC<PanelProps> = ({ phase }) => {
 };
 
 const LoginButton = styled.a`
-    background-color: var(--pink-light);
-    font-size: 14px;
-    width: 80%;
-    text-align: center;
-    border: 1px solid #222;
-    border-radius: 3px;
-    text-decoration: none;
-    color: black;
-    padding: 10px 20px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-`
+  background-color: var(--pink-light);
+  font-size: 14px;
+  width: 80%;
+  text-align: center;
+  border: 1px solid #222;
+  border-radius: 3px;
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+`;
 
 const Header = styled.div`
-    font-size: 24px;
+  font-size: 24px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 `;
 
 const Description = styled.div`
-    font-size: 14px;
-    text-align: center;
+  font-size: 14px;
+  text-align: center;
 `;
 
 const LoginStateContainer = styled.div`
-    display: flex;
+  display: flex;
   min-height: inherit;
   flex-direction: column;
   align-items: center;
@@ -70,5 +70,3 @@ const LoginStateContainer = styled.div`
 
   padding: 20px;
 `;
-
-

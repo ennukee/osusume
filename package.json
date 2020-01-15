@@ -5,13 +5,15 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "test": "jest"
   },
   "dependencies": {
     "@types/styled-components": "^4.4.2",
     "babel-plugin-styled-components": "^1.10.6",
     "d3-ease": "^1.0.6",
     "isomorphic-unfetch": "3.0.0",
+    "jest": "^24.9.0",
     "next": "latest",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -21,8 +23,6 @@
     "styled-components": "^5.0.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.6.1",
-    "@typescript-eslint/parser": "^2.6.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/react-hooks": "^3.1.1",
@@ -30,6 +30,8 @@
     "@types/node": "^12.12.21",
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
+    "@typescript-eslint/eslint-plugin": "^2.6.1",
+    "@typescript-eslint/parser": "^2.6.1",
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-airbnb-typescript": "^6.0.0",
@@ -39,6 +41,7 @@
     "eslint-plugin-react-hooks": "^2.0.1",
     "jest-canvas-mock": "^2.1.2",
     "jest-fetch-mock": "^3.0.1",
+    "jest-styled-components": "^7.0.0",
     "prettier": "^1.18.2",
     "typescript": "3.7.3"
   },

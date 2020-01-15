@@ -1,42 +1,37 @@
-import React, { useState, useEffect } from "react";
-import { useSpring, animated } from "react-spring";
-import { PanelDimContainer } from "../utils/interfaces";
-import styled from "styled-components";
-import { PanelDisplay } from "../components/PanelDisplay/PanelDisplay";
+import React, { useState, useEffect } from 'react';
+import { useSpring, animated } from 'react-spring';
+import { PanelDimContainer } from '../utils/interfaces';
+import styled from 'styled-components';
+import { PanelDisplay } from '../components/PanelDisplay/PanelDisplay';
 
 // To be removed when API is up and running
-import {
-  testTokenQuery,
-  testOsusumeCheck,
-  testProfileGen,
-  testGenerateRecs
-} from "../utils/mockAPI";
+import { testTokenQuery, testOsusumeCheck, testProfileGen, testGenerateRecs } from '../utils/mockAPI';
 
 const panelDimByPhase: PanelDimContainer = {
   login: {
     width: 500,
-    height: 140
-  }
+    height: 140,
+  },
 };
 interface LoginProps {
   location: any; // react-router interface
   history: any; // react-router interface
 }
 const Login: React.FC<LoginProps> = ({ location, history }) => {
-  const [phase, setPhase] = useState("initialLoad");
+  const [phase, setPhase] = useState('initialLoad');
   const panelProps = useSpring({
     width: panelDimByPhase[phase]?.width || 300,
-    minHeight: panelDimByPhase[phase]?.height || 140
+    minHeight: panelDimByPhase[phase]?.height || 140,
   });
   const panelEntryProps = useSpring({
     to: {
-      transform: "translateY(0px)",
-      opacity: 1
+      transform: 'translateY(0px)',
+      opacity: 1,
     },
     from: {
-      transform: "translateY(-75px)",
-      opacity: 0
-    }
+      transform: 'translateY(-75px)',
+      opacity: 0,
+    },
   });
 
   // ! ----------------- ! //
@@ -50,44 +45,42 @@ const Login: React.FC<LoginProps> = ({ location, history }) => {
         // If it does exist, we want to try and rip it apart and get a token from it
         // (which may not work, which is why we try-catch it)
         responseToken = hash
-          .split("#")[1]
-          .split("&")
-          .filter((item: string) => item.split("=")[0] === "access_token")[0]
-          .split("=")[1];
+          .split('#')[1]
+          .split('&')
+          .filter((item: string) => item.split('=')[0] === 'access_token')[0]
+          .split('=')[1];
       } catch (e) {
         // Something went wrong parsing the url hash
-        console.error(
-          "Something went wrong parsing the response from AniList (this may be OK)"
-        );
+        console.error('Something went wrong parsing the response from AniList (this may be OK)');
         console.log(e);
       }
     }
     if (responseToken) {
       // If the try-catch didn't fail, this variable should be populated with our desired string
       // which we should persist in local storage
-      localStorage.setItem("token", responseToken);
+      localStorage.setItem('token', responseToken);
 
       // Reset the hash in URL so we don't have users looking at garbage
-      window.location.hash = "";
+      window.location.hash = '';
     }
 
-    const token = localStorage.getItem("token");
+    const token = localStorage.getItem('token');
     if (token) {
       // If we have a pre-saved token, try to validate it
       const checkToken = async () => {
         const result = await testTokenQuery();
         if (result.ok) {
           // If we have a usable token pre-cached, move on to the post-login logic
-          console.log("boop");
-          setPhase("postLogin");
+          console.log('boop');
+          setPhase('postLogin');
         } else {
-          localStorage.removeItem("token"); // remove outdated token
-          setPhase("login"); // go to login phase so user can log in again
+          localStorage.removeItem('token'); // remove outdated token
+          setPhase('login'); // go to login phase so user can log in again
         }
       };
       checkToken();
     } else {
-      setPhase("login");
+      setPhase('login');
     }
   }, [location, history]);
 
@@ -96,42 +89,42 @@ const Login: React.FC<LoginProps> = ({ location, history }) => {
   // ? ------------------------- ? //
   useEffect(() => {
     // TODO: if nothing major changes between now and release, abstract this a bit to make it less duplicated
-    if (phase === "postLogin") {
+    if (phase === 'postLogin') {
       // Validating presence of existing osusume data
       const checkForOsusumeData = async () => {
         const result = await testOsusumeCheck();
         if (result.ok) {
           // If we have osusume data, just load straight into a data view
           // TODO - hoist the data from response to parent state
-          setPhase("finishLogin");
+          setPhase('finishLogin');
         } else {
           // If we do not, we need to generate a profile for them
-          setPhase("generateProfile");
+          setPhase('generateProfile');
         }
       };
       checkForOsusumeData();
-    } else if (phase === "generateProfile") {
+    } else if (phase === 'generateProfile') {
       const generateProfile = async () => {
         const profileGenResult = await testProfileGen();
         if (profileGenResult) {
           // If we were able to successfully generate a profile, move on to next phase
-          setPhase("requestRecs");
+          setPhase('requestRecs');
         } else {
           // ??? prof gen failed what do
         }
       };
       generateProfile();
-    } else if (phase === "requestRecs") {
+    } else if (phase === 'requestRecs') {
       const generateRecs = async () => {
         const recGenResult = await testGenerateRecs();
         if (recGenResult.ok) {
-          setPhase("finishLogin");
+          setPhase('finishLogin');
         } else {
           // ??? unable to generate recs what do
         }
       };
       generateRecs();
-    } else if (phase === "finishLogin") {
+    } else if (phase === 'finishLogin') {
       // Lift up the state containing our data so we can move to the Portal view
     }
   }, [phase]);
@@ -146,7 +139,7 @@ const Login: React.FC<LoginProps> = ({ location, history }) => {
 };
 
 const LoginContainer = styled.div`
-  background-image: url("/static/landing-bg.jpg");
+  background-image: url('/static/landing-bg.jpg');
   display: flex;
   align-items: center;
   justify-content: center;

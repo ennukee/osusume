@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Views/Login/components/PanelDisplay/PanelDisplay accepts finishLogin phase 1`] = `
+<div>
+  <div
+    class="Loading__LoadingPanel-sc-1g2rmbs-0 bikQKX"
+  >
+    <div
+      class="Loading__LoadingLabel-sc-1g2rmbs-1 gRBana"
+    >
+      Done! Now redirecting...
+    </div>
+    <img
+      class="Loading__LoadingGif-sc-1g2rmbs-2 gbhczI"
+      src="/static/loading.gif"
+    />
+    <div
+      class="Loading__SlowLabel-sc-1g2rmbs-3 iAfWcn"
+    />
+  </div>
+</div>
+`;
+
+exports[`Views/Login/components/PanelDisplay/PanelDisplay accepts generateProfile phase 1`] = `
+<div>
+  <div
+    class="Loading__LoadingPanel-sc-1g2rmbs-0 bikQKX"
+  >
+    <div
+      class="Loading__LoadingLabel-sc-1g2rmbs-1 gRBana"
+    >
+      Generating preference profile... (new user)
+    </div>
+    <img
+      class="Loading__LoadingGif-sc-1g2rmbs-2 gbhczI"
+      src="/static/loading.gif"
+    />
+    <div
+      class="Loading__SlowLabel-sc-1g2rmbs-3 iAfWcn"
+    >
+      Stay tight, this part may take a few minutes to complete.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Views/Login/components/PanelDisplay/PanelDisplay accepts initialLoad phase 1`] = `
+<div>
+  <div
+    class="Loading__LoadingPanel-sc-1g2rmbs-0 bikQKX"
+  >
+    <div
+      class="Loading__LoadingLabel-sc-1g2rmbs-1 gRBana"
+    >
+      Checking for existing login...
+    </div>
+    <img
+      class="Loading__LoadingGif-sc-1g2rmbs-2 gbhczI"
+      src="/static/loading.gif"
+    />
+    <div
+      class="Loading__SlowLabel-sc-1g2rmbs-3 iAfWcn"
+    />
+  </div>
+</div>
+`;
+
+exports[`Views/Login/components/PanelDisplay/PanelDisplay accepts login phase 1`] = `
+<div>
+  <div
+    class="PanelDisplay__LoginStateContainer-s33gcz-3 eknvRK"
+  >
+    <div
+      class="PanelDisplay__Header-s33gcz-1 dmvHNS"
+    >
+      Welcome
+    </div>
+    <div
+      class="PanelDisplay__Description-s33gcz-2 dhjHFp"
+    >
+      Looks like you're new or have been logged out from your previous session. Use the button below to log back in!
+    </div>
+    <a
+      class="PanelDisplay__LoginButton-s33gcz-0 dckaMb"
+      href="https://anilist.co/api/v2/oauth/authorize?client_id=1334&response_type=token"
+    >
+      Log in
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Views/Login/components/PanelDisplay/PanelDisplay accepts postLogin phase 1`] = `
+<div>
+  <div
+    class="Loading__LoadingPanel-sc-1g2rmbs-0 bikQKX"
+  >
+    <div
+      class="Loading__LoadingLabel-sc-1g2rmbs-1 gRBana"
+    >
+      Checking for osusume data...
+    </div>
+    <img
+      class="Loading__LoadingGif-sc-1g2rmbs-2 gbhczI"
+      src="/static/loading.gif"
+    />
+    <div
+      class="Loading__SlowLabel-sc-1g2rmbs-3 iAfWcn"
+    />
+  </div>
+</div>
+`;
+
+exports[`Views/Login/components/PanelDisplay/PanelDisplay accepts requestRecs phase 1`] = `
+<div>
+  <div
+    class="Loading__LoadingPanel-sc-1g2rmbs-0 bikQKX"
+  >
+    <div
+      class="Loading__LoadingLabel-sc-1g2rmbs-1 gRBana"
+    >
+      Picking out the best recommendations...
+    </div>
+    <img
+      class="Loading__LoadingGif-sc-1g2rmbs-2 gbhczI"
+      src="/static/loading.gif"
+    />
+    <div
+      class="Loading__SlowLabel-sc-1g2rmbs-3 iAfWcn"
+    >
+      Stay tight, this part may take a few minutes to complete.
+    </div>
+  </div>
+</div>
+`;
