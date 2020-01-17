@@ -52,8 +52,8 @@ const LoginButton = styled.a`
 `;
 
 const Header = styled.div`
-  font-size: 24px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 30px;
+  font-family: 'Quicksand', sans-serif;
 `;
 
 const Description = styled.div`

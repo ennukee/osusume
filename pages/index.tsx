@@ -21,7 +21,7 @@ const Landing: React.FC = () => {
       <LandingDiv>
         <Container>
           <IntroContainer>
-            <Title>osusume</Title>
+            <Title>OSUSUME</Title>
             <Subtitle>recommendations by a robot</Subtitle>
             <Link href="/login">
               <JoinButton style={buttonProps}>Find your new binge</JoinButton>
@@ -108,10 +108,13 @@ const JoinButton = styled(animated.div)`
 
 const Subtitle = styled.div`
   font-size: 1.6em;
+  font-weight: bold;
 `;
 
 const Title = styled.header`
-  font-size: 6em;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+  font-size: 5em;
   line-height: 0.9em;
 `;
 

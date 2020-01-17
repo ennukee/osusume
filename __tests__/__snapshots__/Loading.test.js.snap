@@ -6,7 +6,7 @@ exports[`Views/Login/components/PanelDisplay/components/Loading puts children as
     class="Loading__LoadingPanel-sc-1g2rmbs-0 bikQKX"
   >
     <div
-      class="Loading__LoadingLabel-sc-1g2rmbs-1 gRBana"
+      class="Loading__LoadingLabel-sc-1g2rmbs-1 kMxKAK"
     >
       Children
     </div>
@@ -27,7 +27,7 @@ exports[`Views/Login/components/PanelDisplay/components/Loading renders slow-lab
     class="Loading__LoadingPanel-sc-1g2rmbs-0 bikQKX"
   >
     <div
-      class="Loading__LoadingLabel-sc-1g2rmbs-1 gRBana"
+      class="Loading__LoadingLabel-sc-1g2rmbs-1 kMxKAK"
     >
       Children
     </div>

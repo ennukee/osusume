@@ -6,7 +6,7 @@ exports[`Views/Login/components/PanelDisplay/PanelDisplay accepts finishLogin ph
     class="Loading__LoadingPanel-sc-1g2rmbs-0 bikQKX"
   >
     <div
-      class="Loading__LoadingLabel-sc-1g2rmbs-1 gRBana"
+      class="Loading__LoadingLabel-sc-1g2rmbs-1 kMxKAK"
     >
       Done! Now redirecting...
     </div>
@@ -27,7 +27,7 @@ exports[`Views/Login/components/PanelDisplay/PanelDisplay accepts generateProfil
     class="Loading__LoadingPanel-sc-1g2rmbs-0 bikQKX"
   >
     <div
-      class="Loading__LoadingLabel-sc-1g2rmbs-1 gRBana"
+      class="Loading__LoadingLabel-sc-1g2rmbs-1 kMxKAK"
     >
       Generating preference profile... (new user)
     </div>
@@ -50,7 +50,7 @@ exports[`Views/Login/components/PanelDisplay/PanelDisplay accepts initialLoad ph
     class="Loading__LoadingPanel-sc-1g2rmbs-0 bikQKX"
   >
     <div
-      class="Loading__LoadingLabel-sc-1g2rmbs-1 gRBana"
+      class="Loading__LoadingLabel-sc-1g2rmbs-1 kMxKAK"
     >
       Checking for existing login...
     </div>
@@ -71,7 +71,7 @@ exports[`Views/Login/components/PanelDisplay/PanelDisplay accepts login phase 1`
     class="PanelDisplay__LoginStateContainer-s33gcz-3 eknvRK"
   >
     <div
-      class="PanelDisplay__Header-s33gcz-1 dmvHNS"
+      class="PanelDisplay__Header-s33gcz-1 bCTvtb"
     >
       Welcome
     </div>
@@ -96,7 +96,7 @@ exports[`Views/Login/components/PanelDisplay/PanelDisplay accepts postLogin phas
     class="Loading__LoadingPanel-sc-1g2rmbs-0 bikQKX"
   >
     <div
-      class="Loading__LoadingLabel-sc-1g2rmbs-1 gRBana"
+      class="Loading__LoadingLabel-sc-1g2rmbs-1 kMxKAK"
     >
       Checking for osusume data...
     </div>
@@ -117,7 +117,7 @@ exports[`Views/Login/components/PanelDisplay/PanelDisplay accepts requestRecs ph
     class="Loading__LoadingPanel-sc-1g2rmbs-0 bikQKX"
   >
     <div
-      class="Loading__LoadingLabel-sc-1g2rmbs-1 gRBana"
+      class="Loading__LoadingLabel-sc-1g2rmbs-1 kMxKAK"
     >
       Picking out the best recommendations...
     </div>

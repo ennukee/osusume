@@ -27,7 +27,7 @@ const LoadingPanel = styled.div`
 
 const LoadingLabel = styled.div`
   font-size: 16px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-weight: 600;
   text-align: center;
 `;
