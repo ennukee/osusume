@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
     div#__next, html, body {
         margin: 0;
         font-size: 10px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Open Sans', sans-serif;
         color: var(--font-color-tint);
     }
 `;
