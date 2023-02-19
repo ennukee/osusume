@@ -64,7 +64,7 @@ const Login: React.FC = () => {
     const token = localStorage.getItem('token');
     if (token) {
       // If we have a pre-saved token, try to validate it
-      const checkToken = async () => {
+      const checkToken = async (): Promise<void> => {
         const result = await testTokenQuery();
         if (result.ok) {
           // If we have a usable token pre-cached, move on to the post-login logic
@@ -163,7 +163,7 @@ const bgMovement = keyframes`
 `;
 
 const LoginContainer = styled.div`
-  background-image: url('/static/landing-bg.jpg');
+  background-image: url('/7.jpg');
   animation: ${bgMovement} 60s ease-in-out infinite, ${bgColoring} 20s infinite;
   display: flex;
   align-items: center;
@@ -172,8 +172,6 @@ const LoginContainer = styled.div`
   width: 100%;
   height: 100vh;
   background-size: cover;
-
-  background-size: 150%;
   background-position: 0% 30%;
 `;
 

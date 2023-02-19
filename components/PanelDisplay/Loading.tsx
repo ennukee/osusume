@@ -9,7 +9,7 @@ export const Loading: React.FC<LoadingProps> = ({ children, slow }) => {
   return (
     <LoadingPanel>
       <LoadingLabel>{children}</LoadingLabel>
-      <LoadingGif src="/static/loading.gif" />
+      <LoadingGif src="/loading.gif" />
       <SlowLabel>{slow && 'Stay tight, this part may take a few minutes to complete.'}</SlowLabel>
     </LoadingPanel>
   );

@@ -146,7 +146,7 @@ const Container = styled.div`
   width: 100%;
   height: 400px;
   border-bottom: 1px solid var(--font-color-tint);
-  background-image: url('/static/landing-bg.jpg');
+  background-image: url('/7.jpg');
   background-size: cover;
   background-size: 150%;
   background-position: 0% 50%;
