@@ -4,7 +4,9 @@ a machine-learning based anime and manga recommendation platform. this repositor
 
 coming soon to a website near you
 
-and by soon, that probably means sometime mid-2020 given mine and [my colleague](https://github.com/NNarma)'s schedules.
+~~and by soon, that probably means sometime mid-2020 given mine and [my colleague](https://github.com/NNarma)'s schedules.~~
+
+jokes on everybody, who knows when this will finish, if it ever will. back here we are again for another refresh in 2023, let's see if it finishes this time.
 
 ---
 
