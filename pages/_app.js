@@ -5,15 +5,15 @@ const GlobalStyle = createGlobalStyle`
     :root {
         --font-color: #222222;
         --font-color-tint: #22222f;
-        --blue-main: cornflowerblue;
-        --blue-light: rgb(219, 223, 255);
-        --pink-main: mediumorchid;
-        --pink-light: rgb(242, 217, 255);
+        --color-primary: #419ee1;
+        --color-primary-light: #7cb6e1;
+        --color-secondary: #a2e362;
+        --color-secondary-light: #b9e58f;
     }
     div#__next, html, body {
         margin: 0;
         font-size: 10px;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Noto Sans', sans-serif;
         color: var(--font-color-tint);
     }
 `;

@@ -36,7 +36,7 @@ export const PanelDisplay: React.FC<PanelProps> = ({ phase }) => {
 };
 
 const LoginButton = styled.a`
-  background-color: var(--pink-light);
+  background-color: var(--color-secondary-light);
   font-size: 14px;
   width: 80%;
   text-align: center;

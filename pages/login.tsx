@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { NextPage } from 'next';
+import { useRouter } from 'next/router';
 import { useSpring, animated } from 'react-spring';
 import { PanelDimContainer } from '../utils/interfaces';
 import styled, { keyframes } from 'styled-components';
@@ -14,7 +16,8 @@ const panelDimByPhase: PanelDimContainer = {
   },
 };
 
-const Login: React.FC = () => {
+const Login: NextPage = () => {
+  const router = useRouter();
   const [phase, setPhase] = useState('initialLoad');
   const panelProps = useSpring({
     width: panelDimByPhase[phase]?.width || 300,
@@ -122,9 +125,11 @@ const Login: React.FC = () => {
       };
       generateRecs();
     } else if (phase === 'finishLogin') {
-      // Lift up the state containing our data so we can move to the Portal view
+      // Once the generation of the profile has been created, we can move to the home page where we properly
+      // send a request for the data
+      router.push('/home')
     }
-  }, [phase]);
+  }, [phase, router]);
 
   return (
     <LoginContainer>

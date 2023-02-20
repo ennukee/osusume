@@ -1,11 +1,12 @@
 import React from 'react';
+import { NextPage } from 'next';
 // import Step from 'Views/Landing/components/Step/Step';
 import Link from 'next/link';
 import { useSpring, animated } from 'react-spring';
 import styled, { keyframes } from 'styled-components';
 import { LandingStep } from '../components/LandingStep';
 
-const Landing: React.FC = () => {
+const Landing: NextPage = () => {
   const buttonProps = useSpring({
     transform: 'scale(1)',
     from: {
@@ -21,7 +22,7 @@ const Landing: React.FC = () => {
       <LandingDiv>
         <Container>
           <IntroContainer>
-            <Title>OSUSUME</Title>
+            <Title>osusume</Title>
             <Subtitle>recommendations by a robot</Subtitle>
             <Link href="/login">
               <JoinButton style={buttonProps}>Find your new binge</JoinButton>
@@ -56,13 +57,13 @@ const Steps = styled.div`
 
 const joinButtonPulse = keyframes`
   0% {
-    background-color: var(--blue-light);
+    background-color: var(--color-primary-light);
   }
   50% {
-    background-color: var(--pink-light);
+    background-color: var(--color-secondary-light);
   }
   100% {
-    background-color: var(--blue-light);
+    background-color: var(--color-primary-light);
   }
 `;
 const bgColoring = keyframes`
@@ -102,19 +103,18 @@ const JoinButton = styled(animated.div)`
   border: 1px solid var(--font-color-tint);
   color: var(--font-color-tint);
   background-color: lightblue;
-  animation: ${joinButtonPulse} 4s infinite;
+  animation: ${joinButtonPulse} 10s infinite;
   cursor: pointer;
 `;
 
 const Subtitle = styled.div`
-  font-size: 1.6em;
-  font-weight: bold;
+  font-size: 2.2em;
+  font-weight: 400;
 `;
 
 const Title = styled.header`
-  font-family: 'Quicksand', sans-serif;
   font-weight: 300;
-  font-size: 5em;
+  font-size: 7.75em;
   line-height: 0.9em;
 `;
 
@@ -126,7 +126,7 @@ const Diamond = styled.div`
   height: 40px;
   width: 40px;
   border: 1px solid var(--font-color-tint);
-  animation: ${joinButtonPulse} 4s infinite;
+  animation: ${joinButtonPulse} 10s infinite;
 `;
 
 const IntroContainer = styled.div`

@@ -12,7 +12,8 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link
-            href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Quicksand:300,400,700&display=swap"
+            // eslint-disable-next-line max-len
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&family=Noto+Sans:wght@100;400;700&display=swap"
             rel="stylesheet"
           />
         </Head>
