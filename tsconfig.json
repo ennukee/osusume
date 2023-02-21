@@ -2,6 +2,7 @@
   "compilerOptions": {
     "allowJs": true,
     "alwaysStrict": true,
+    "baseUrl": ".",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
@@ -17,6 +18,23 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "resolveJsonModule": true,
+    "paths": {
+      "@/components/*": [
+        "components/*"
+      ],
+      "@/utils/*": [
+        "utils/*"
+      ],
+      "@/firebase-client": [
+        "utils/firebase/firebaseClient.js"
+      ],
+      "@/firebase-admin": [
+        "utils/firebase/firebaseAdmin.js"
+      ],
+      "@/fs-client-funcs": [
+        "utils/firebase/firestore/functions.js"
+      ]
+    },
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext",

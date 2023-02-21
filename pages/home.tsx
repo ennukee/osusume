@@ -1,12 +1,14 @@
+import type firebase from 'firebase/app'
+
 import React, { useEffect, useState } from 'react';
-import { NextPage } from 'next';
 import styled from 'styled-components';
 
-import { testRecEndpointReturn } from '../utils/mockAPI';
+import { getDocByID } from '@/fs-client-funcs';
+import { testRecEndpointReturn } from '@/utils/mockAPI';
 
-
-const HomePage: NextPage = () => {
+export default function HomePage() {
   const [d, sD] = useState()
+  const [fsData, setFsData] = useState<firebase.firestore.DocumentData>()
   useEffect(() => {
     async function getData() {
       const resp = await testRecEndpointReturn();
@@ -17,15 +19,23 @@ const HomePage: NextPage = () => {
       const json = await resp.json();
       sD(json.recs)
     }
+
+    async function getFSData() {
+      const doc = await getDocByID('cMrwApQWSUBZEg0YmEY7')
+      console.log(doc)
+      setFsData(doc)
+    }
+
     getData()
+    getFSData()
   }, [])
 
   return (
     <HomeContainer>
-      {JSON.stringify(d)}
+      {JSON.stringify(fsData)}
     </HomeContainer>
-  );
-};
+  )
+}
 
 const HomeContainer = styled.div`
   width: 100vw;
@@ -35,4 +45,4 @@ const HomeContainer = styled.div`
   background-position: 0% 30%;
 `
 
-export default HomePage;
+// export default HomePage;

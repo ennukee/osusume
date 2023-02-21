@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import { useSpring, animated } from 'react-spring';
-import { PanelDimContainer } from '../utils/interfaces';
 import styled, { keyframes } from 'styled-components';
-import { PanelDisplay } from '../components/PanelDisplay/PanelDisplay';
+
+import { PanelDimContainer } from '@/utils/interfaces';
+import { PanelDisplay } from '@/components/PanelDisplay';
 
 // To be removed when API is up and running
 import { testTokenQuery, testOsusumeCheck, testProfileGen, testGenerateRecs } from '../utils/mockAPI';

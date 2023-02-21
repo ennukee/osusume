@@ -1,10 +1,10 @@
 import React from 'react';
 import { NextPage } from 'next';
-// import Step from 'Views/Landing/components/Step/Step';
 import Link from 'next/link';
 import { useSpring, animated } from 'react-spring';
 import styled, { keyframes } from 'styled-components';
-import { LandingStep } from '../components/LandingStep';
+
+import { LandingStep } from '@/components/LandingStep';
 
 const Landing: NextPage = () => {
   const buttonProps = useSpring({
