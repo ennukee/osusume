@@ -33,6 +33,9 @@
       ],
       "@/fs-client-funcs": [
         "utils/firebase/firestore/functions.js"
+      ],
+      "@/fs-admin-funcs": [
+        "utils/firebase/firestore/beFunctions.js"
       ]
     },
     "skipLibCheck": true,
@@ -45,6 +48,7 @@
   ],
   "include": [
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "pages/home.tsx.old"
   ]
 }

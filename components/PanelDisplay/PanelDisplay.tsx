@@ -26,8 +26,6 @@ export const PanelDisplay: React.FC<PanelProps> = ({ phase }) => {
       return <Loading>Checking for osusume data...</Loading>;
     case 'generateProfile':
       return <Loading slow>Generating preference profile... (new user)</Loading>;
-    case 'requestRecs':
-      return <Loading slow>Picking out the best recommendations...</Loading>;
     case 'finishLogin':
       return <Loading>Done! Now redirecting...</Loading>;
     default:

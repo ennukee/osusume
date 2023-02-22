@@ -69,14 +69,15 @@ const Login: NextPage = () => {
     if (token) {
       // If we have a pre-saved token, try to validate it
       const checkToken = async (): Promise<void> => {
-        const result = await testTokenQuery();
-        if (result.ok) {
-          // If we have a usable token pre-cached, move on to the post-login logic
-          console.log('boop');
-          setPhase('postLogin');
+        const result = await fetch(`/api/testToken?token=${token}`)
+        const data = await result.json()
+        const viewedId = data?.data?.Viewer?.id
+        if (viewedId) {
+          localStorage.setItem('id', viewedId)
+          setPhase('postLogin')
         } else {
-          localStorage.removeItem('token'); // remove outdated token
-          setPhase('login'); // go to login phase so user can log in again
+          localStorage.removeItem('token')
+          setPhase('login')
         }
       };
       checkToken();
@@ -109,22 +110,12 @@ const Login: NextPage = () => {
         const profileGenResult = await testProfileGen();
         if (profileGenResult) {
           // If we were able to successfully generate a profile, move on to next phase
-          setPhase('requestRecs');
+          setPhase('finishLogin');
         } else {
           // ??? prof gen failed what do
         }
       };
       generateProfile();
-    } else if (phase === 'requestRecs') {
-      const generateRecs = async () => {
-        const recGenResult = await testGenerateRecs();
-        if (recGenResult.ok) {
-          setPhase('finishLogin');
-        } else {
-          // ??? unable to generate recs what do
-        }
-      };
-      generateRecs();
     } else if (phase === 'finishLogin') {
       // Once the generation of the profile has been created, we can move to the home page where we properly
       // send a request for the data
